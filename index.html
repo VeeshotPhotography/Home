@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeshot Photography</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar" role="banner">
+        <div class="logo" id="logo" tabindex="0">Veeshot Photography</div>
+        <nav id="nav-menu" role="navigation">
+            <a href="#slideshow">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#albums">Albums</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <button id="mode-toggle-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+        </nav>
+        <div class="toggle" id="nav-toggle" aria-label="Toggle navigation menu">🌙</div>
+    </header>
+
+    <main class="main" role="main">
+        <section id="slideshow" class="slideshow" aria-label="Hero slideshow">
+            <button class="slide-arrow left" id="slide-prev" aria-label="Previous image"><i class="fa fa-chevron-left"></i></button>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80" alt="Wedding moments" class="slide active" />
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80" alt="Engagement moments" class="slide" />
+            <img src="https://images.unsplash.com/photo-1519741491571-747933fba8c4?auto=format&fit=crop&w=1470&q=80" alt="Outdoor moments" class="slide" />
+            <div class="slide-text" id="slide-text">
+                <h2>Wedding</h2>
+                <p>Moments sealed forever</p>
+            </div>
+            <button class="slide-arrow right" id="slide-next" aria-label="Next image"><i class="fa fa-chevron-right"></i></button>
+            <div class="dots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about" aria-labelledby="about">
+            <h2>About Us</h2>
+            <p>At Veeshot Photography, every frame is a heartbeat. We believe photography isn’t just about light and lenses—it’s about emotion, presence, and moments that speak without words. Whether it’s a stolen glance, a child’s laughter, or the quiet elegance of a bride, we capture what can’t be posed. Each shot is a story, each click a memory engraved for generations.</p>
+        </section>
+
+        <section id="events" aria-labelledby="events">
+            <h2>Events</h2>
+            <p class="section-caption">
+                From grand weddings to intimate birthdays, every event is a unique story waiting to be told. Our team specializes in capturing the spirit, emotion, and energy of your special occasions—ensuring that every smile, every embrace, and every detail is preserved for a lifetime. Trust us to document your milestones with creativity, care, and a personal touch.
+            </p>
+            <div class="events-wrapper">
+                <button class="scroll-arrow left" id="events-prev" aria-label="Previous event" tabindex="0">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <div class="scroll-horizontal" aria-label="Events categories" id="events-scroll">
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Wedding: Graceful beginnings">
+                        <div class="card-content">
+                            <h3>Wedding</h3>
+                            <p>Graceful beginnings</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Engagement: Promise of forever">
+                        <div class="card-content">
+                            <h3>Engagement</h3>
+                            <p>Promise of forever</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Outdoor: Nature's embrace">
+                        <div class="card-content">
+                            <h3>Outdoor</h3>
+                            <p>Nature's embrace</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1519741491571-747933fba8c4?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Pre/Post Wedding: Timeless moments">
+                        <div class="card-content">
+                            <h3>Pre/Post Wedding</h3>
+                            <p>Timeless moments</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Puberty: Celebrating growth">
+                        <div class="card-content">
+                            <h3>Puberty</h3>
+                            <p>Celebrating growth</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Birthday: Joyful celebrations">
+                        <div class="card-content">
+                            <h3>Birthday</h3>
+                            <p>Joyful celebrations</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow right" id="events-next" aria-label="Next event" tabindex="0">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="albums" aria-labelledby="albums">
+            <h2 style="text-align:center;">Our Albums</h2>
+            <p class="section-caption" style="text-align:center;">
+                Your memories deserve to be cherished in style. Choose from our range of beautifully crafted albums—each designed to showcase your moments with elegance and personality. Whether you prefer classic layouts or modern designs, our albums are made to last and to be shared for generations.
+            </p>
+            <div class="albums-scroll-horizontal" aria-label="Album types">
+                <div class="album-card" tabindex="0" role="group" aria-label="Traditional: Timeless elegance in every page">
+                    <div class="album-image" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="album-content">
+                        <h3>Traditional</h3>
+                        <p>Timeless elegance in every page</p>
+                    </div>
+                </div>
+                <div class="album-card" tabindex="0" role="group" aria-label="Modern: Minimal, sleek, and stylish layouts">
+                    <div class="album-image" style="background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="album-content">
+                        <h3>Modern</h3>
+                        <p>Minimal, sleek, and stylish layouts</p>
+                    </div>
+                </div>
+                <div class="album-card" tabindex="0" role="group" aria-label="Candid: Natural moments caught spontaneously">
+                    <div class="album-image" style="background-image: url('https://images.unsplash.com/photo-1494522342776-56a28d8eeb7a?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="album-content">
+                        <h3>Candid</h3>
+                        <p>Natural moments caught spontaneously</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" aria-labelledby="gallery">
+            <h2 style="text-align:center;">Gallery</h2>
+            <p class="section-caption" style="text-align:center;">
+                Explore a curated selection of our favorite photographs, featuring both breathtaking landscapes and heartfelt portraits. Each image is a testament to our passion for storytelling and our commitment to capturing the beauty in every moment. Let our gallery inspire your next unforgettable shoot.
+            </p>
+            <div class="gallery-wrapper">
+                <button class="scroll-arrow left" id="gallery-prev" aria-label="Previous image" tabindex="0">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <div class="scroll-horizontal" aria-label="Gallery images" id="gallery-scroll">
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Landscape: Golden hour">
+                        <div class="card-content">
+                            <h3>Landscape</h3>
+                            <p>Golden hour</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1519741491571-747933fba8c4?auto=format&fit=crop&w=400&q=80')" tabindex="0" role="group" aria-label="Portrait: Timeless beauty">
+                        <div class="card-content">
+                            <h3>Portrait</h3>
+                            <p>Timeless beauty</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Landscape: Misty morning">
+                        <div class="card-content">
+                            <h3>Landscape</h3>
+                            <p>Misty morning</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80')" tabindex="0" role="group" aria-label="Portrait: Joyful moment">
+                        <div class="card-content">
+                            <h3>Portrait</h3>
+                            <p>Joyful moment</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80')" tabindex="0" role="group" aria-label="Landscape: Serene lake">
+                        <div class="card-content">
+                            <h3>Landscape</h3>
+                            <p>Serene lake</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80')" tabindex="0" role="group" aria-label="Portrait: Elegant pose">
+                        <div class="card-content">
+                            <h3>Portrait</h3>
+                            <p>Elegant pose</p>
+                        </div>
+                    </div>
+                    <div class="card more-card" tabindex="0" role="group" aria-label="More images">
+                        <div class="card-content">
+                            <i class="fa fa-images" style="font-size:2em;margin-bottom:8px;"></i>
+                            <h3>More images</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow right" id="gallery-next" aria-label="Next image" tabindex="0">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing" aria-labelledby="pricing">
+            <h2>Pricing</h2>
+            <p>Our pricing is designed to provide you with exceptional value while capturing your special moments perfectly. For detailed packages and personalized quotes, please get in touch with us.</p>
+            <button onclick="window.location.href='tel:+919952286105'" aria-label="Call Veeshot Photography">Call to Enquire</button>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact">
+            <div class="card-box" aria-label="Business contact details">
+                <h3>Contact Us</h3>
+                <p><strong>Veeshot Photography</strong></p>
+                <p>Phone: +91 99522 86105</p>
+                <p>Email: <a href="mailto:contact@veeshot.photography">contact@veeshot.photography</a></p>
+                <p>Instagram: <a href="https://instagram.com/veeshot.photography" target="_blank" rel="noopener noreferrer">@veeshot.photography</a></p>
+            </div>
+            <form class="form-box" action="mailto:contact@veeshot.photography" method="POST" enctype="text/plain">
+                <h3>Send an Enquiry</h3>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" aria-label="Send enquiry">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="fab" id="fab" aria-label="Contact options">
+        <div class="main-btn" onclick="toggleFAB()">+</div>
+        <div class="actions">
+            <a href="tel:+919952286105" aria-label="Call" title="Call">📞</a>
+            <a href="https://wa.me/919952286105" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+            <a href="https://instagram.com/veeshot.photography" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">📸</a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
