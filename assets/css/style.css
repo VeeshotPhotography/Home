@@ -202,6 +202,20 @@ body {
   color: #fff;
 }
 
+/* Bright/Dark mode toggle button styles */
+#mode-toggle-btn {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: #222; /* Default: dark text for bright mode */
+    transition: color 0.2s;
+}
+
+body.dark-mode #mode-toggle-btn {
+    color: #fff; /* Bright text for dark mode */
+}
+
 .navbar .toggle {
   display: none;
 }
