@@ -124,8 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Floating button toggle ---
     function toggleFAB() {
-        document.getElementById('fab').classList.toggle('show');
+        const fab = document.getElementById('fab');
+        fab.classList.toggle('open');
     }
+
+    // Optional: Close FAB when clicking outside
+    document.addEventListener('click', function(event) {
+        const fab = document.getElementById('fab');
+        if (!fab.contains(event.target)) {
+            fab.classList.remove('open');
+        }
+    });
 
     // --- Mobile nav toggle ---
     const navMenu = document.getElementById('nav-menu');
