@@ -45,6 +45,77 @@ a {
   transition: background 0.5s;
 }
 
+/* Base styles for mobile-first approach */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+}
+
+.logo {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+#nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+#nav-menu a, #nav-menu button {
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.toggle {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+        border: none;
+    }
+    #nav-menu a, #nav-menu button {
+        padding: 8px 16px;
+        text-align: center;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+}
+
 /* Top Navigation - modern style */
 .navbar {
   position: sticky;
@@ -896,4 +967,9 @@ section,
     margin: 0 0 22px 0;
     font-weight: 400;
     letter-spacing: 0.01em;
+}
+
+/* Show nav menu when toggled (add JS to toggle .open class) */
+.navbar.open #nav-menu {
+    display: flex;
 }
